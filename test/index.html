@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心智探奇</title>
+    <!-- Bootstrap 5 CSS (使用国内 CDN) -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery (使用国内 CDN) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- 使用 Bootstrap 的容器 -->
+        <div class="container-fluid px-0">
+            <!-- 轮播图 -->
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- 轮播指示器 -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- 轮播内容 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="images/carousel/banner1-wide.png">
+                            <img src="images/carousel/banner1-square.png" class="d-block w-100" alt="认知心理学">
+                        </picture>
+                        <div class="carousel-caption">
+                            <h2>探索心智的奥秘</h2>
+                            <p>认知心理学的前沿发现</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="images/carousel/banner2-wide.png">
+                            <img src="images/carousel/banner2-square.png" class="d-block w-100" alt="幻灯片2">
+                        </picture>
+                        <div class="carousel-caption">
+                            <h2>大脑与行为</h2>
+                            <p>解密人类行为背后的科学</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="images/carousel/banner3-wide.png">
+                            <img src="images/carousel/banner3-square.png" class="d-block w-100" alt="幻灯片3">
+                        </picture>
+                        <div class="carousel-caption">
+                            <h2>思维与决策</h2>
+                            <p>了解决策背后的认知过程</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播控制按钮 -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">上一个</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">下一个</span>
+                </button>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="container my-5">
+                <!-- 特色内容区 -->
+                <section class="row mb-5">
+                    <div class="col-md-8 mx-auto">
+                        <h2 class="mb-4 text-center fw-bold section-title">最 新 文 章</h2>
+
+                        <!-- 文章列表 -->
+                        <div class="article-list">
+                            <article class="mb-5">
+                                <a href="articles/2024/01/cognitive-psychology-intro.html" class="text-decoration-none">
+                                    <h3 class="h4 mb-2 text-dark">认知心理学概述</h3>
+                                    <p class="text-secondary mb-0">认知心理学的研究对象、发展历史及主要理论框架</p>
+                                </a>
+                            </article>
+
+                            <article class="mb-5">
+                                <a href="articles/2024/01/attention-mechanism.html" class="text-decoration-none">
+                                    <h3 class="h4 mb-2 text-dark">注意力机制</h3>
+                                    <p class="text-secondary mb-0">注意力的类型、特点及其在认知过程中的作用</p>
+                                </a>
+                            </article>
+
+                            <article class="mb-5">
+                                <a href="articles/2024/01/time-management.html" class="text-decoration-none">
+                                    <h3 class="h4 mb-2 text-dark">时间管理，管理的不该只有时间</h3>
+                                    <p class="text-secondary mb-0">《深度工作》书评</p>
+                                </a>
+                            </article>
+                        </div>
+
+                        <!-- 阅读更多按钮 -->
+                        <div class="text-center mt-4">
+                            <a href="pages/articles.html" class="btn btn-outline-primary btn-lg">
+                                查看更多文章 <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- 推荐书籍区 -->
+                <section class="row mb-5">
+                    <h2 class="text-center mb-4 fw-bold section-title">推 荐 好 书</h2>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="书籍封面">
+                            <div class="card-body">
+                                <h3 class="card-title">思考，快与慢</h3>
+                                <p class="card-text">作者：丹尼尔·卡尼曼</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 更多书籍卡片 -->
+                    <!-- 更多书籍 -->
+                    <div class="text-center mt-4">
+                        <a href="pages/books.html" class="btn btn-outline-primary btn-lg">
+                            查看更多书籍 <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS 和依赖 (使用国内 CDN) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

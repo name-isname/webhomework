@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选文章 - 心智探奇</title>
+    <!-- Bootstrap 5 CSS (使用国内 CDN) -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- jQuery (使用国内 CDN) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="featured-header vh-100 position-relative">
+            <!-- 移动端图片 (4:3) -->
+            <img src="../images/featured-mobile.png" class="w-100 h-100 d-block d-md-none" alt="精选文章">
+            <!-- 桌面端图片 (16:9) -->
+            <img src="../images/featured-desktop.png" class="w-100 h-100 d-none d-md-block" alt="精选文章">
+
+            <!-- 覆盖在图片上的标题 -->
+            <div class="position-absolute top-50 start-25 translate-middle-y">
+                <h1 class="text-white display-4 fw-bold">精选文章</h1>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <!-- 页面标题 -->
+            <header class="text-center mb-5">
+                <h1 class="mb-4 text-center fw-bold section-title">精选文章</h1>
+                <p class="lead">探索认知科学的前沿发现</p>
+            </header>
+
+            <!-- 文章列表 -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="article-list">
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/time-management.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">时间管理，管理的不该只有时间</h3>
+                                <p class="text-secondary mb-0">《深度工作》书评</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2025/01/和梅棹忠夫一起学习卡片.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">和梅棹忠夫一起学习卡片</h3>
+                                <p class="text-secondary mb-0">卡片笔记法</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/cognitive-psychology-intro.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">认知心理学概述</h3>
+                                <p class="text-secondary mb-0">认知心理学的研究对象、发展历史及主要理论框架</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/attention-mechanism.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">注意力机制</h3>
+                                <p class="text-secondary mb-0">注意力的类型、特点及其在认知过程中的作用</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/intelligence.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">当我们在谈论智力时，我们在谈论什么？</h3>
+                                <p class="text-secondary mb-0">智力理论的演变、智力测验的发展及其在心理学中的地位</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/big-five-personality-model.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">大五人格模型，人性可以预测吗？</h3>
+                                <p class="text-secondary mb-0">大五人格模型的基本结构、特点及其在心理学中的应用</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/cognitive-bias.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">认知偏差</h3>
+                                <p class="text-secondary mb-0">认知偏差的概念、类型及其在心理学中的应用</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/heuristic.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">启发法，如何快速解决问题？</h3>
+                                <p class="text-secondary mb-0">启发法的概念、类型及其在心理学中的应用</p>
+                            </a>
+                        </article>
+
+                        <article class="mb-5">
+                            <a href="../articles/2024/01/motivation.html" class="text-decoration-none">
+                                <h3 class="h4 mb-2 text-dark">动机，如何激发人的行为？ </h3>
+                                <p class="text-secondary mb-0">动机的概念、类型及其在心理学中的应用</p>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- 分页 -->
+                    <nav class="my-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">上一页</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">下一页</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS 和依赖 (使用国内 CDN) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

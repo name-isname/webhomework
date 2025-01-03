@@ -1,0 +1,43 @@
+{
+    "articles": [
+        {
+            "id": "cognitive-psychology-intro",
+            "title": "认知心理学概述",
+            "path": "2024/01/cognitive-psychology-intro.html",
+            "date": "2024-01-15",
+            "description": "认知心理学的研究对象、发展历史及主要理论框架",
+            "categories": [
+                "认知心理"
+            ],
+            "columns": [
+                "cognitive-psychology"
+            ],
+            "featured": true
+        },
+        {
+            "id": "attention-mechanism",
+            "title": "注意力机制",
+            "path": "2024/01/attention-mechanism.html",
+            "date": "2024-01-20",
+            "description": "注意力的类型、特点及其在认知过程中的作用",
+            "categories": [
+                "认知心理"
+            ],
+            "columns": [
+                "cognitive-psychology"
+            ],
+            "featured": false
+        }
+    ],
+    "columns": [
+        {
+            "id": "cognitive-psychology",
+            "title": "认知心理学入门",
+            "description": "系统性地了解认知心理学的基础概念和研究方法",
+            "articles": [
+                "cognitive-psychology-intro",
+                "attention-mechanism"
+            ]
+        }
+    ]
+}

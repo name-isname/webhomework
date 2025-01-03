@@ -1,0 +1,582 @@
+:root {
+    --warm-blue: #4a90e2;
+    /* 温暖的主蓝色 */
+    --warm-blue-dark: #357abd;
+    --warm-blue-dark-2: #4a90ff;
+    --warm-blue-dark-3: #4a85ff;
+    /* 深一点的变体 */
+    --warm-blue-light: #6aa9e9;
+    /* 浅一点的变体 */
+    --warm-blue-light-2: #2d71d6;
+    --warm-blue-light-3: #d7b136;
+}
+
+/* 基础样式 */
+body {
+    margin: 0;
+    padding-top: 60px;
+    /* 为固定导航栏留出空间 */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.header {
+    width: 100%;
+    background-color: var(--warm-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: transparent !important;
+    /* 移除navbar的背景色 */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--warm-blue);
+    color: #fff;
+    padding: 2rem 0;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 0 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    background: #fff;
+}
+
+/* 横幅样式 */
+.banner {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 特色内容区样式 */
+.features {
+    margin: 40px 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.article-preview {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.article-preview:last-child {
+    border-bottom: none;
+}
+
+.read-more {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 书籍区域样式 */
+.book-section {
+    background: #f9f9f9;
+    padding: 40px 0;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 关于我们区域样式 */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgb(47, 104, 219);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .book-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner h1 {
+        font-size: 2em;
+    }
+}
+
+/* 轮播图样式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    position: relative;
+    width: 100%;
+}
+
+/* 16:9 比例容器 */
+@media (min-width: 768px) {
+    .carousel-slide {
+        padding-bottom: 56.25%;
+        /* 16:9 = 9/16 = 0.5625 */
+    }
+}
+
+/* 4:3 比例容器 */
+@media (max-width: 767px) {
+    .carousel-slide {
+        padding-bottom: 75%;
+        /* 4:3 = 3/4 = 0.75 */
+    }
+}
+
+.carousel-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 10%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-button {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* 只需保留一些自定义样式 */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        height: 500px;
+    }
+
+    .carousel-item img {
+        height: 100%;
+    }
+}
+
+/* 自定义样式补充 */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 在现有样式中添加 */
+.nav-links a.active {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+/* 专栏卡片样式 */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 确保图片比例一致 */
+.card .col-md-4 {
+    min-height: 200px;
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文章列表样式 */
+.article-list article {
+    padding: 1rem 0;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.article-list article:hover {
+    transform: translateX(10px);
+}
+
+.article-list h2,
+.article-list h3 {
+    font-weight: 500;
+}
+
+.article-list p {
+    font-size: 0.95rem;
+}
+
+/* 确保链接可以点击 */
+.article-list a {
+    display: block;
+    color: inherit;
+    position: relative;
+    z-index: 1;
+}
+
+.article-list a:hover {
+    text-decoration: none;
+}
+
+/* 让伪元素不阻挡点击 */
+.article-list article::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* 导航链接样式 */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+/* 品牌名称样式 */
+.navbar-brand {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    color: var(--warm-blue-dark-2);
+    font-size: 3.0rem;
+    /* 或者使用 40px */
+    font-weight: 700;
+    /* 确保加粗效果 */
+}
+
+.article-list article a {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.article-list article a:hover h3 {
+    color: var(--warm-blue-dark-3) !important;
+    font-weight: 700;
+}
+
+.article-list article a:hover p {
+    color: var(--warm-blue-dark-3) !important;
+    font-weight: 500;
+}
+
+/* 头图容器 */
+.featured-header {
+    background-color: #f8f9fa;
+    overflow: hidden;
+    height: 100vh;
+    /* 确保严格等于视窗高度 */
+    min-height: 100vh;
+    /* 最小高度也是视窗高度 */
+    max-height: 100vh;
+    /* 最大高度限制在视窗高度 */
+    margin-top: -60px;
+    padding-top: 60px;
+}
+
+/* 头图样式 */
+.featured-header img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* 标题样式 */
+.featured-header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0 2rem;
+}
+
+/* 返回按钮样式 */
+.btn-outline-primary {
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    transform: translateX(-5px);
+}
+
+.btn-outline-primary i {
+    margin-right: 0.5rem;
+}
+
+/* 返回按钮样式 */
+.btn.text-primary {
+    color: var(--warm-blue-light-2) !important;
+    transition: all 0.2s ease;
+}
+
+.btn.text-primary:hover {
+    transform: translateX(-5px);
+    font-weight: 700;
+}
+
+.btn.text-primary i {
+    margin-right: 0.5rem;
+}
+
+/* 图标也跟着加粗 */
+.btn.text-primary:hover i {
+    font-weight: 700;
+}
+
+/* 其他按钮样式 */
+.btn-primary {
+    background-color: var(--warm-blue-light-2) !important;
+    border-color: var(--warm-blue-light-2) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--warm-blue-dark) !important;
+    border-color: var(--warm-blue-dark) !important;
+}
+
+.btn-outline-primary {
+    color: var(--warm-blue-light-2) !important;
+    border-color: var(--warm-blue-light-2) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--warm-blue-light-2) !important;
+    color: white !important;
+}
+
+/* 链接颜色 */
+a {
+    color: var(--warm-blue-light-2);
+}
+
+a:hover {
+    color: var(--warm-blue-dark);
+}
+
+/* 确保其他使用主色调的元素也更新 */
+.text-primary {
+    color: var(--warm-blue-light-2) !important;
+}
+
+.bg-primary {
+    background-color: var(--warm-blue-light-2) !important;
+}
+
+.border-primary {
+    border-color: var(--warm-blue-light-2) !important;
+}
+
+/* 文章样式 */
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.article-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--warm-blue-light-2);
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--warm-blue-light-2);
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-content p {
+    margin-bottom: 1.2rem;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--warm-blue-light-2);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #666;
+}
+
+.article-content blockquote p {
+    margin-bottom: 0.8rem;
+}
+
+.article-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.article-content strong {
+    color: var(--warm-blue-light-2);
+}
